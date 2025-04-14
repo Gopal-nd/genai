@@ -19,7 +19,7 @@ it works on the transformer (google paper)
 
 convert the text -> tokens 
 
-[tokenizer](tiktokenizer.com)
+[tokenizer](https://tiktokenizer.com)
 
 vector Embeddings => they will give  the Symentic Meaning
 
@@ -166,6 +166,16 @@ tech support
 virtual girl friend
 
 how can i train the model on data e.g. 10tb data
+
+
+## day 3
+
+giving the super power to llms
+
+llms -> brian
+tools -> body
+
+example weather agent, stocks, news
 
 
 

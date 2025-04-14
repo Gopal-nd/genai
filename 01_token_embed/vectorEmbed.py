@@ -1,9 +1,13 @@
 from dotenv import load_dotenv
 from openai import OpenAI
-
-load_dotenv()
+import os
+load_dotenv(dotenv_path='../.env')
 
 client = OpenAI()
+
+# open_ai_api_key = os.getenv("OPENAI_API_KEY")
+
+# print(open_ai_api_key)
 
 text = "Avengers is og movie"
 

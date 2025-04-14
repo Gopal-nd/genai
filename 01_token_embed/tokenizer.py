@@ -5,7 +5,9 @@ import tiktoken
 
 encoder = tiktoken.encoding_for_model('gpt-4o')
 
-print('vocab size of gpt 4o', encoder.n_vocab)
+print('vocab size of gpt 4o', encoder.max_token_value)
+
+# print('token encoder', encoder.encode)
 
 
 text = "people set on chair" #[28963, 920, 402, 16540]
@@ -15,7 +17,7 @@ tokens = encoder.encode(text)
 
 print('Tokens',tokens)
 
-output = [28963, 920, 402, 16540]
+output = [28963, 920, 402, 16540,0,]
 
 decoded = encoder.decode(output)
 
