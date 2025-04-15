@@ -47,19 +47,20 @@ weather_fn = {
 }
 
 run_cmd_fn = {
-    "name": "run_command",
-    "description": "Executes a shell command and returns its output.",
-    "parameters": {
-        "type": "object",
-        "properties": {
-            "command": {
-                "type": "string",
-                "description": "The shell command to run, e.g. 'ls -la'",
-            },
-        },
-        "required": ["command"],
+  "name": "run_command",
+  "description": "Executes any shell command on the host system—creating directories, files, or performing other terminal actions—and returns the command’s output or error message.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "command": {
+        "type": "string",
+        "description": "The exact shell command to run, e.g., 'mkdir -p project/src' or 'echo \"Hello\" > file.txt'."
+      }
     },
+    "required": ["command"]
+  }
 }
+
 
 tool_decl = types.Tool(function_declarations=[weather_fn, run_cmd_fn])  # type: ignore
 config = types.GenerateContentConfig(tools=[tool_decl])
@@ -94,6 +95,8 @@ while True:
             tool_result = f"Error: unknown function {fn_call.name}"
 
         print(f"🛠️ Tool result: {tool_result}")
+        continue
+
 
         
     else:
