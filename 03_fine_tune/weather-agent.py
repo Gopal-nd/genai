@@ -56,6 +56,8 @@ Output Format:
     "input": "string"
 }
 
+give the object only not arry
+
 Available Tools:
 - get_weather: Takes a city name as input and returns the weather.
 - run_command: Takes a shell command as input and returns the output.
@@ -90,6 +92,7 @@ while True:
         if response.text is None:
             raise ValueError("Empty response!")
 
+        print( response.text)
         output = json.loads(response.text)
         step = output.get("step")
         content = output.get("content")
