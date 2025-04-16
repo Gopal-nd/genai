@@ -177,8 +177,23 @@ tools -> body
 
 example weather agent, stocks, news
 
+Next word prediction model
+
+[Next Word](https://colab.research.google.com/drive/1DMbV9Qnw0ni_CfBgogAAPrda6aD7hHP5?usp=sharing)
 
 
+
+### Day4 Fine Tuning
+
+1. get the token from hugging face
+2. select the model 
+3. fine ture it with data
+4. push the model to hugging face
+
+#### Methods of fine tuning
+
+1. full parameter fine tune
+2. LoRA 
 
 
 
