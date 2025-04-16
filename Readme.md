@@ -196,5 +196,15 @@ Next word prediction model
 2. LoRA 
 
 
+## 5 day
+
+RAG Application (Retreval Agrumented Generation)
+
+an ai teachnique that combain the power of information retrival with large lanuguage model (llms) to enhance the accureacy and context-awerness of ai generateed response , it works by first searching for the relevent data(web , documents, database) and feed the context to the llm to get the accuret result
 
 
+1. indexing - > break down the content
+2. retreving 
+
+
+RAG CHAIN 
