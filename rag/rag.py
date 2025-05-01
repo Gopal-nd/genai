@@ -22,7 +22,7 @@ docs = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 split_docs = text_splitter.split_documents(documents=docs) # type: ignore
 
-os.environ["GOOGLE_API_KEY"] = "your api key"
+os.environ["GOOGLE_API_KEY"] = "AIzaSyDua3oug9q_gS5lioN3kHW_RaBC2SQU6xU"
 
 embedder = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
 

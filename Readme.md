@@ -203,8 +203,118 @@ RAG Application (Retreval Agrumented Generation)
 an ai teachnique that combain the power of information retrival with large lanuguage model (llms) to enhance the accureacy and context-awerness of ai generateed response , it works by first searching for the relevent data(web , documents, database) and feed the context to the llm to get the accuret result
 
 
-1. indexing - > break down the content
-2. retreving 
+------------------ Basic Rag
 
+1. indexing - > break down the content -> make it inito chuks -> store it in database -> qdrantDB
 
+2. retreving -> based on the user query -> we search the semiler chuks -> from the data base
+
+3. generation -> using the chuncks and the user query -> we give that to the llm -> llm will give output
+
+----------------- Advanced Rag
 RAG CHAIN 
+
+. Query Transformation/ translation
+. Routing
+. Query construction
+. Indexing
+. Retrival
+. Generation
+
+## Query Transformation/ translation
+
+more abstarction
+|
+| {Question} = re-write the query (rag rusion, multi query)
+|
+|
+|
+less abstraction
+
+[diagram](https://app.eraser.io/workspace/W1ItJUWco1xYkXrVLsMR)
+
+parallel Query (Fan Out) Retrival
+- make the 3-4 queryes  for the {user query}
+- then make vector serch -> you will get the chunks
+- now filter all the unique chunks
+- use them to llm with the chinks and user query
+
+
+Reseprocate rank Fusion
+- same as parllel but we write ranking algo - more no of same chunks
+
+Query Decomposition
+- abstract (step back prompting) e.g what is programing
+- less abstact (chain of thought) e.g ex. python programing to make the text split at a char
+- make differt query for the user query, break down the question in step by step 
+- ex. think machine learning
+
+step back prompting white paper
+
+HyDE -> hypothetical document embedding (need the large model)
+|
++
+user query => based on the user query create documentation for this -> genarte embeding from he documetion -> give that to model + user query
+
+
+
+## Routing (langraph)
+
+### logical routing
+-- it will redirect to the correct data-source
+- it works on the grouping
+- name spacing (qdrant collections)
+- like seperating the user data and source
+
+e.g:
+i have 3 data source
+1. python
+2. javascript
+3. gamining
+
+based on the user query pick the best source
+
+-like school
+    - finincial Records
+    - employee
+    - techical details
+    - resurch paper
+
+- create multiple vector database , make the collections in vector database
+
+- parse , user query and rank the collection and search the db
+
+### semantic Routing
+- if u know there are only few possibliity 
+
+## Query construction Knowledge Graph (relationships)
+take the chunks and store them in the both vector db and graph db
+
+when user ask question -> searcg in vector db ,from the vector db get the entities -> then make the graph serach in graph db then get all connected nodes, (with this context it have context of all things related to other entities)
+
+(to have relational graph)
+
+knowledeg Graph
+knowledge -> some thing 
+Graph -> relation ship with entities knowledge
+
+
+making the chunks  and storing in the vector db
+
+now lets make the cunks as node and make relations to each others
+## neo4j
+- graph database  - cypher Qyery
+
+now we have three ways-> raw, langchain , memory
+
+usecase: ai assistents, medical usecase, question and answer
+
+
+#### code a auto rabbit
+#### resume preprations + voice + video + rattings
+#### edutech products
+#### TA Hiring
+
+
+
+
