@@ -315,6 +315,9 @@ usecase: ai assistents, medical usecase, question and answer
 #### edutech products
 #### TA Hiring
 
+## new libraryes
+1. browser use
+2. tavilySearch
 
 
 
