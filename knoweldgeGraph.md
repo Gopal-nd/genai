@@ -65,6 +65,9 @@ if new messahe came , rmove last one and add to the knowledge graph
 
 like push in to queue when excread the 10 add the knowladeg graph to thaat and pass the context
 
+##
+sesameAllLabs
+
 
 
 
